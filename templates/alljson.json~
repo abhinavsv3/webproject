@@ -9,7 +9,8 @@
             "id": "0"
         }, 
         {
-            "title": "1", 
+            "title": "1",
+		"root":true, 
             "sizes": "20", 
             "relatedness": "0.5", 
             "cluster": "0", 
@@ -63,54 +64,6 @@
             "cluster": "1", 
             "type": "node", 
             "id": "7"
-        }, 
-        {
-            "title": "8", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "8"
-        }, 
-        {
-            "title": "9", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "9"
-        }, 
-        {
-            "title": "10", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "10"
-        }, 
-        {
-            "title": "11", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "11"
-        }, 
-        {
-            "title": "12", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "12"
-        }, 
-        {
-            "title": "13", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "2", 
-            "type": "node", 
-            "id": "13"
         }
     ], 
     "edges": [
@@ -157,13 +110,7 @@
             "relatedness": "1"
         }, 
         {
-            "source": "4", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "4", 
+            "source": "3", 
             "type": "edge", 
             "target": "7", 
             "relatedness": "1"
@@ -175,6 +122,18 @@
             "relatedness": "1"
         }, 
         {
+            "source": "4", 
+            "type": "edge", 
+            "target": "6", 
+            "relatedness": "1"
+        }, 
+        {
+            "source": "4", 
+            "type": "edge", 
+            "target": "7", 
+            "relatedness": "1"
+        }, 
+        {
             "source": "5", 
             "type": "edge", 
             "target": "7", 
@@ -189,67 +148,7 @@
         {
             "source": "6", 
             "type": "edge", 
-            "target": "11", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "6", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "7", 
-            "type": "edge", 
-            "target": "9", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "9", 
-            "type": "edge", 
-            "target": "10", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "8", 
-            "type": "edge", 
-            "target": "13", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "11", 
-            "type": "edge", 
-            "target": "12", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "10", 
-            "type": "edge", 
-            "target": "12", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "12", 
-            "type": "edge", 
-            "target": "13", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "9", 
-            "type": "edge", 
-            "target": "11", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "8", 
-            "type": "edge", 
-            "target": "10", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "11", 
-            "type": "edge", 
-            "target": "13", 
+            "target": "7", 
             "relatedness": "1"
         }
     ]

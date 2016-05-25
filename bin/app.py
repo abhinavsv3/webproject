@@ -5,17 +5,56 @@ import spliterinpy as spl
 import webbrowser
 
 urls = (
-  '/', 'index', '/upload','Upload','/jsons','rscreen'
-)
+  '/', 'index',
+  '/home', 'index',
+  '/userdisplay','userdisplay',
+  '/rscreen','rscreen',
+  '/root','rootsonscreen',
+  '/node','nodesonscreen' # Error class not yet here
+  )
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
 
+class rootsonscreen:
+    def GET(self):
+        print "Displaying roots"
+        url = "./templates/tmp.html"
+        new=2
+        webbrowser.open(url,new=new)
+        return render.rscreen()
+
+class nodesonscreen:
+    def GET(self):
+        print "Displaying nodes"
+        url = "./templates/nodes.html"
+        new=3
+        webbrowser.open(url,new=new)
+        return render.rscreen()
+
 class index:
+    def GET(self):
+        print "Home called"
+        return render.index()
+
+    def POST(self):
+        try: #User login can be done using the data base try it later
+            form = web.input(uname="user", pword="password")
+            print form.uname
+            print form.pword
+
+            if form.uname == "admin" and form.pword == "admin":
+                raise web.seeother("/userdisplay")
+            else:
+                raise
+        except:
+            return render.error("Login error")
+
+class userdisplay:
     def GET(self):
         greeting = ""
         print "In Here"
-        return render.index()
+        return render.home()
     
     def POST(self):
         try:
@@ -47,15 +86,17 @@ class index:
 
 
 
-            url = "./templates/tmp.html"
-            new=2
-            webbrowser.open(url,new=new)
-            url = "./templates/nodes.html"
-            new=3
-            webbrowser.open(url,new=new)
+#            url = "./templates/tmp.html"
+ #           new=2
+  #          webbrowser.open(url,new=new)
+   #         url = "./templates/nodes.html"
+    #        new=3
+     #       webbrowser.open(url,new=new)
+      #      c = rscreen()
+       #     c.GET()
             return render.rscreen()
         except:
-            return render.error("Error in Reading the Input")
+            return render.error("Error In userdisplay")
 
 class rscreen:
     def GET(self):
@@ -66,7 +107,7 @@ class rscreen:
     def POST(self):
         try:
             print "Heyasdf"
-            return render.index()
+            return render.userdisplay()
         except:
             return render.error("HAHA")
 
