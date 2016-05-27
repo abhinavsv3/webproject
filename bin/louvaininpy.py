@@ -47,6 +47,7 @@ class louvaininpy:
     #Formatof number representation in the matrix:
     #"start weight destination"
         y = range(0,len(x))
+        self.totnodes = len(x)
         d = dict(zip(x,y))
         print "Loading Complete, Rearraging"
         st = mt[0] = [d[i] for i in mt[0]]
@@ -316,6 +317,7 @@ class louvaininpy:
         x = list(set(mt[0]).union(mt[1]))
         print "Loading Complete, Rearraging"
         y = range(0,len(x))
+        self.totnodes = len(x)
         d = dict(zip(x,y))
         st = mt[0] = [d[i] for i in mt[0]]
         ds = mt[1] = [d[i] for i in mt[1]]

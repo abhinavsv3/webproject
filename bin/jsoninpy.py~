@@ -12,14 +12,14 @@ class jsoninpy:
 # default node size is 20 but with the size 
 #I increase the size of the node further to show bigger visual
 
-	def jsonRoot(self, i,size): 
+	def jsonRoot(self, i,size,n): 
 		print "Creating Root",i 
 		k = {}
 		k['id'] = str(i)
 #		k['root'] = True
 		k['type'] = str(i)
 		k['title'] = str(i)
-		k['sizes'] = str((size*2) + 20)
+		k['sizes'] = str(((size/n)*200) + 20)
 		k['type'] = "root"
 		self.jd['nodes'].append(deepcopy(k))
 	
