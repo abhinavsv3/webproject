@@ -22,6 +22,13 @@
       font-weight: 600;
       margin-bottom: 30px;
   }
+  h3 {
+      font-size: 24px;
+      text-transform: capitalize ;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
   h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -32,14 +39,21 @@
   .jumbotron {
       background-color: #b29000;
       color: #fff;
-      padding: 100px 25px;
+      padding: 5px 25px;
       font-family: Montserrat, sans-serif;
   }
   .container-fluid {
-      padding: 60px 50px;
+      padding: 30px 30px;
+      background-color: #FFFFFA;
   }
   .bg-grey {
       background-color: #f6f6f6;
+  }
+  .bg-blue {
+      background-color: #f6f6ff;
+  }
+  .bg-white{
+      background-color: #ffffff; 
   }
   .logo-small {
       color: #f4511e;
@@ -102,9 +116,6 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
   }
-  .wrapper{
-    text-align:center
-  }
   .panel-footer {
       background-color: white !important;
   }
@@ -123,11 +134,10 @@
   .navbar {
       margin-bottom: 0;
       background-color: #b29000;
-      border-color: #b29000;
       z-index: 9999;
       border: 0;
       font-size: 12px !important;
-      line-height: 0.75 !important;
+      line-height: 1.42857143 !important;
       letter-spacing: 4px;
       border-radius: 0;
       font-family: Montserrat, sans-serif;
@@ -140,7 +150,7 @@
       background-color: #fff !important;
   }
   .navbar-default .navbar-toggle {
-      border-color: #000000;
+      border-color: transparent;
       color: #fff !important;
   }
   footer .glyphicon {
@@ -207,65 +217,74 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">Initial</a></li>
-        <li><a href="#tryit">Tryit!</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <h1>Welcome to graphApp</h1> 
-  <p>Application to vis graph</p> 
 
-   <form class="form-inline">
-    <button type="button" class="btn btn-primary btn-lg">Try It At Once!!</button>
-  </form>
+
+<div class="container-fluid bg-blue">
+<br>
+  <h3>The program has used louvain Algorithm to split the graph into various communities</h3>
+  <h4>Click on the respective Buttons to have the view of the app</h4> 
+  <p>Works Really Cool</p>
+  <hr>
+  <!--- <button class="btn btn-default btn-lg">Get in Touch</button> -->
 </div>
-
+<!--
 <div  id = "tryit" class="container-fluid bg-grey"  >
-    <div class="row">
+    <form class = "form-inline" method = "POST" enctype="multipart/form-data">
+    <h2>Greetings:</h2> <input type="text" placeholder="Vankam!" name="greet"><br/>
+    <h2>Message:</h2> <input type="text" placeholder="Vazhga Valamudan!" name="name"><br/>
+     <h4>Choose the File :</h4><input type = "file" class = "form-control" name="myfile">
+      <h4>Is the input a Weighted Graph? :</h4>
+      <input type="radio" name="weighted" value="Yep"> Yep<br>
+        <input type="radio" name="weighted" value="No"> No<br>
+    <input type = "submit" class = "form-control">
+ </form>
+</div>
+-->
+<div class="container-fluid">
+  <div class="row">
     <div class="col-sm-2">
       <span class="glyphicon glyphicon-fire logo"></span>
     </div>
-      <div class="col-sm-6">
-        <form class = "form-inline" method = "POST" enctype="multipart/form-data">
-          <h4>Choose the File :</h4><input type = "file"  name="myfile" required="true">
-      </div>
-       <div class="col-sm-8"><br/>
-  <input class="wrapper btn btn-default btn-lg" type = "submit" class = "form-control">
-    </div>
-    </div>
-
-  
-  </div>
-      
- </form>
-
-</div>
-<!--
-<div class="container-fluid bg-grey">
-  <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-fire logo"></span>
+      <h3>Roots</h3>
+      <form class = "form-inline" action="/root" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Roots:</strong> Displays the Upper most layer of the graph</h4> 
+      <p><strong>VISION:</strong> Highest level to see the graphs and thier interlinks</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>All nodes</h3>
+      <form class = "form-inline" action="/node" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Roots:</strong> Displays the Upper most layer of the graph</h4> 
+      <p><strong>VISION:</strong> Highest level to see the graphs and thier interlinks</p>
+    </div>
+<!--
+    <div class="col-sm-6">
+      <h2>Our Values</h2>
+      <h4><strong>MISSION:</strong> Our misssafion lorem ipsum..</h4> 
+      <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
     </div>
     <div class="col-sm-8">
       <h2>Our Values</h2>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4> 
-      <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+      <h4><strong>MISSION:</strong> Our misssafion lorem ipsum..</h4> 
+      <p><strong>VISION:</strong> Our vision Loreasd ipsum..</p>
     </div>
+    -->
   </div>
 </div>
 
-<div class="container-fluid">
-  <h2>About the App</h2>
-  <h4>The App is super Sonic</h4> 
-  <p>Works Really Cool</p>
-  <button class="btn btn-default btn-lg">Get in Touch</button>
-</div>
 
--->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
 

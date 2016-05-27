@@ -1,0 +1,54 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://abhinavsv3.github.io/javascriptsal/alchemy.min.css"/>
+</head>
+<title>All Nodes Seperated into Communities</title>
+<body>
+  <div class="alchemy" id="alchemy"></div>
+
+  <script src="http://abhinavsv3.github.io/javascriptsal/alchemy.min1.js"></script>
+  <script type="text/javascript">
+  
+     var config = {
+        
+        dataSource: "alljson.json",
+        cluster: true,
+        clusterColours: ["#DD79FF", "#FFFC00","#00FF30", "#5168FF","#00C0FF", "#FF004B", "#00CDCD", "#f83f00", "#f800df", "#ff8d8f","#ffcd00", "#184fff","#ff7e00"],
+        forceLocked: false,
+        nodeCaption: "title", 
+        nodeMouseOver: 'title',
+        edgeCaption: "relatedness",
+        nodeCaptionsOnByDefault: true,showControlDash : true,edgeFilters: true,
+         nodesToggle: true,                                              
+                showEditor: true,
+                zoomControls: true,                                                                 
+                showStats: true,                
+                nodeStats: true,                
+                showFilters: true,                
+                edgeFilters: true,
+        nodeTypes: {"type":["root","edge","node"]},
+        nodeStyle: {
+            "root": {
+
+              "borderColor": "#000000",
+                    "borderWidth": function(d) {
+                        return 10
+                    },
+                    "color": function(d) { 
+                        return "rgba(104, 185, 254, " + 
+                        (d.getProperties().sizes/5) + " )" 
+                    }, 
+
+                "radius": function(d){ return d.getProperties().sizes *1}
+            }
+
+        }, 
+        initialScale: 1, 
+        initialTranslate: [250,150]
+      }
+
+        alchemy = new Alchemy(config)
+    </script>
+  </body>
+</html>Hey! Something happended and that's why you came to this blank page. May be the JSON Object was too  big to have it loaded into your web browser. It's ok, it can be fixed.
+:)

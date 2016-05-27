@@ -22,6 +22,12 @@
       font-weight: 600;
       margin-bottom: 30px;
   }
+  h3 {
+      font-size: 20px;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 0px;
+  }
   h4 {
       font-size: 19px;
       line-height: 1.375em;
@@ -224,17 +230,21 @@
   </form>
 </div>
 
+
+
 <div  id = "tryit" class="container-fluid bg-grey"  >
     <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <span class="glyphicon glyphicon-fire logo"></span>
     </div>
-      <div class="col-sm-6">
-        <form class = "form-inline" method = "POST" enctype="multipart/form-data">
-          <h4>Choose the File :</h4><input type = "file"  name="myfile" required="true">
-      </div>
-       <div class="col-sm-8"><br/>
-  <input class="wrapper btn btn-default btn-lg" type = "submit" class = "form-control">
+    <div class="col-sm-4">
+      <form  method="POST">
+    <h3>Username:</h3> <input type="text" placeholder="Enter the Username!" name="uname"><br/>
+    <h3>Password:</h3> <input type="password" placeholder="Enter your password here!" name="pword"><br/>
+    <br/><br/>
+    <input type="submit" value="Log in">
+</form>
+
     </div>
     </div>
 

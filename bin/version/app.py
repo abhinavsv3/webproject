@@ -69,7 +69,7 @@ class userdisplay:
             print type(x['myfile'].file)
             print type(x['myfile'].file.read())
             g = l.louvaininpy()
-            if len(c.split("\n")[0]) != 3:
+            if form.weighted == "Yep":
                 g.sCreateWeightedGraph(x['myfile'].value)
             else:
                 g.sCreateGraph(x['myfile'].value)   
