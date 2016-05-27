@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  max-width: 960px;
+  margin: 1px;
+}
+
+div {
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0 1px;
+  float: right;
+  background: #eee;
+  display: inline-block;
+}
+
+
+divs {
+  width: 20px;
+  height: 20px;
+  margin: 1px 0 0 1px;
+  float: right;
+  background: #000;
+  display: inline-block;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v4.0.0-alpha.24.min.js"></script>
+
+<script>
+
+var n = 4002;
+
+var whiteblue = d3.interpolateRgb("#eee", "steelblue"),
+    blueorange = d3.interpolateRgb("steelblue", "orange"),
+    orangewhite = d3.interpolateRgb("orange", "#eee"),white = d3.interpolateRgb("blue", "grey");
+
+d3.select("body").selectAll("div")
+    .data(d3.range(1))
+  .enter().append("div");
+
+</script>
