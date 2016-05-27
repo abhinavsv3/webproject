@@ -44,7 +44,8 @@ def splitroot(g,partition):
 
 	for i in range(0,lenp):
 		for j in range(i,lenp):
-			newj.jsonEdge(i,j,matrixa[i][j])	
+			if matrixa[i][j] != 0:
+				newj.jsonEdge(i,j,matrixa[i][j])
 
 	rootsJsonObject = newj
 	return newj,newnode

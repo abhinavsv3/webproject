@@ -16,7 +16,7 @@ class jsoninpy:
 		print "Creating Root",i 
 		k = {}
 		k['id'] = str(i)
-		k['root'] = True
+#		k['root'] = True
 		k['type'] = str(i)
 		k['title'] = str(i)
 		k['sizes'] = str((size*2) + 20)
