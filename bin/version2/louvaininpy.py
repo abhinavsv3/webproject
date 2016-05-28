@@ -49,7 +49,6 @@ class louvaininpy:
         y = range(0,len(x))
         self.totnodes = len(x)
         d = dict(zip(x,y))
-        self.relabel = dict(zip(y,x))
         print "Loading Complete, Rearraging"
         st = mt[0] = [d[i] for i in mt[0]]
         ds = mt[2] = [d[i] for i in mt[2]]
@@ -320,7 +319,6 @@ class louvaininpy:
         y = range(0,len(x))
         self.totnodes = len(x)
         d = dict(zip(x,y))
-        self.relabel = dict(zip(y,x))
         st = mt[0] = [d[i] for i in mt[0]]
         ds = mt[1] = [d[i] for i in mt[1]]
         #print "MT ", mt[1], len(mt[1])

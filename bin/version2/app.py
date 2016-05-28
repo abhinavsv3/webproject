@@ -3,7 +3,6 @@ import louvaininpy as l
 import jsoninpy
 import spliterinpy as spl
 import webbrowser
-import sys
 
 urls = (
   '/', 'index',
@@ -63,27 +62,7 @@ class userdisplay:
             print form.greet
             fn = form.myfile
             x = web.input(myfile={})
-            print x['keyfile']
             print x['myfile'],type(x['myfile'])
-            fila = 0
-            if x['keyfile'] != "":
-                print "Key was inserted"
-                rbl={}
-                vsp = x['keyfile']
-                #print x['keyfile'].value
-                rkey=vsp.split("\n")
-                print rkey
-                if len(rkey[-1]) == 1:
-                    del rkey[-1]
-                for line in rkey:
-                    rc=line.split(' ',1)
-                    print rc
-                    rbl[int(rc[0])] = rc[1]
-                print rbl
-                fila=1
-            else:
-                print "NO"
-
             c = x['myfile'].value
             print "Split",len(c.split("\n")[0])
             print x['myfile'].file
@@ -97,11 +76,6 @@ class userdisplay:
 
             partition, q= g.louvain()
             print partition,q   
-
-            if fila == 1:
-                v = [rbl[g.relabel[i]] for i in g.relabel]
-                g.relabel = dict(zip(g.relabel.keys(),v))
-
 
             #roots  
 
@@ -123,9 +97,7 @@ class userdisplay:
        #     c.GET()
             return render.rscreen()
         except:
-            print("Unexpected error:", sys.exc_info()[0])
             return render.error("Error In userdisplay")
-
 
 class rscreen:
     def GET(self):

@@ -19,13 +19,13 @@ def splitroot(g,partition):
 	newj = jj.jsoninpy()
 	newnode = jj.jsoninpy()
 	for i in roots:
-		newj.jsonRoot(i[0],i[1],g.totnodes,g.relabel[i[0]])	
+		newj.jsonRoot(i[0],i[1],g.totnodes)	
 
 	#Creating the nodes
 	l = 0
 	for i in partition:
 		for j in partition[l]:
-			newnode.jsonNode(j,l,g.relabel[j])
+			newnode.jsonNode(j,l)
 		l = l+1	
 	lst = {}
 	matrixa = [[0 for i in range(len(partition))] for j in range(len(partition))]

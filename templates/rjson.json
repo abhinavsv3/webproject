@@ -4,67 +4,13 @@
             "title": "0", 
             "type": "root", 
             "id": "0", 
-            "sizes": "37"
+            "sizes": "140"
         }, 
         {
             "title": "1", 
             "type": "root", 
             "id": "1", 
-            "sizes": "37"
-        }, 
-        {
-            "title": "2", 
-            "type": "root", 
-            "id": "2", 
-            "sizes": "21"
-        }, 
-        {
-            "title": "3", 
-            "type": "root", 
-            "id": "3", 
-            "sizes": "50"
-        }, 
-        {
-            "title": "4", 
-            "type": "root", 
-            "id": "4", 
-            "sizes": "30"
-        }, 
-        {
-            "title": "5", 
-            "type": "root", 
-            "id": "5", 
-            "sizes": "36"
-        }, 
-        {
-            "title": "6", 
-            "type": "root", 
-            "id": "6", 
-            "sizes": "47"
-        }, 
-        {
-            "title": "7", 
-            "type": "root", 
-            "id": "7", 
-            "sizes": "45"
-        }, 
-        {
-            "title": "8", 
-            "type": "root", 
-            "id": "8", 
-            "sizes": "58"
-        }, 
-        {
-            "title": "9", 
-            "type": "root", 
-            "id": "9", 
-            "sizes": "31"
-        }, 
-        {
-            "title": "10", 
-            "type": "root", 
-            "id": "10", 
-            "sizes": "22"
+            "sizes": "100"
         }
     ], 
     "edges": [
@@ -72,199 +18,19 @@
             "source": "0", 
             "type": "edge", 
             "target": "0", 
-            "relatedness": "2878"
+            "relatedness": "2"
         }, 
         {
             "source": "0", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "18"
-        }, 
-        {
-            "source": "0", 
-            "type": "edge", 
-            "target": "3", 
-            "relatedness": "10"
-        }, 
-        {
-            "source": "0", 
-            "type": "edge", 
-            "target": "7", 
-            "relatedness": "23"
-        }, 
-        {
-            "source": "0", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "10"
+            "relatedness": "2"
         }, 
         {
             "source": "1", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "5319"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "2", 
-            "relatedness": "115"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "3", 
-            "relatedness": "614"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "5", 
-            "relatedness": "145"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "6"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "7", 
-            "relatedness": "3"
-        }, 
-        {
-            "source": "1", 
-            "type": "edge", 
-            "target": "10", 
-            "relatedness": "4"
-        }, 
-        {
-            "source": "2", 
-            "type": "edge", 
-            "target": "2", 
-            "relatedness": "354"
-        }, 
-        {
-            "source": "2", 
-            "type": "edge", 
-            "target": "3", 
-            "relatedness": "11"
-        }, 
-        {
-            "source": "3", 
-            "type": "edge", 
-            "target": "3", 
-            "relatedness": "8907"
-        }, 
-        {
-            "source": "3", 
-            "type": "edge", 
-            "target": "5", 
-            "relatedness": "902"
-        }, 
-        {
-            "source": "3", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "32"
-        }, 
-        {
-            "source": "3", 
-            "type": "edge", 
-            "target": "7", 
-            "relatedness": "22"
-        }, 
-        {
-            "source": "3", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "123"
-        }, 
-        {
-            "source": "4", 
-            "type": "edge", 
-            "target": "4", 
-            "relatedness": "1986"
-        }, 
-        {
-            "source": "4", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "8"
-        }, 
-        {
-            "source": "4", 
-            "type": "edge", 
-            "target": "8", 
             "relatedness": "1"
-        }, 
-        {
-            "source": "5", 
-            "type": "edge", 
-            "target": "5", 
-            "relatedness": "15703"
-        }, 
-        {
-            "source": "5", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "5", 
-            "type": "edge", 
-            "target": "7", 
-            "relatedness": "42"
-        }, 
-        {
-            "source": "5", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "23"
-        }, 
-        {
-            "source": "6", 
-            "type": "edge", 
-            "target": "6", 
-            "relatedness": "5351"
-        }, 
-        {
-            "source": "7", 
-            "type": "edge", 
-            "target": "7", 
-            "relatedness": "13325"
-        }, 
-        {
-            "source": "7", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "1"
-        }, 
-        {
-            "source": "7", 
-            "type": "edge", 
-            "target": "9", 
-            "relatedness": "906"
-        }, 
-        {
-            "source": "8", 
-            "type": "edge", 
-            "target": "8", 
-            "relatedness": "14643"
-        }, 
-        {
-            "source": "9", 
-            "type": "edge", 
-            "target": "9", 
-            "relatedness": "16543"
-        }, 
-        {
-            "source": "10", 
-            "type": "edge", 
-            "target": "10", 
-            "relatedness": "205"
         }
     ]
 }

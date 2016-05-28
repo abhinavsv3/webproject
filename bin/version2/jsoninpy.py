@@ -12,23 +12,23 @@ class jsoninpy:
 # default node size is 20 but with the size 
 #I increase the size of the node further to show bigger visual
 
-	def jsonRoot(self, i,size,n,tit): 
+	def jsonRoot(self, i,size,n): 
 		print "Creating Root",i 
 		k = {}
 		k['id'] = str(i)
 #		k['root'] = True
 		k['type'] = str(i)
-		k['title'] = str(i) # title can be implemented
+		k['title'] = str(i)
 		k['sizes'] = str((int((float(size)/n)*200)) + 20)
 		k['type'] = "root"
 		self.jd['nodes'].append(deepcopy(k))
 	
-	def jsonNode(self,id,clusterid,tit,size = 20 ): # default node size is set as 20 
+	def jsonNode(self,id,clusterid,size = 20 ): # default node size is set as 20 
 		"""All three are integers"""
 		k = {}
 		k['id'] = str(id)
 		k['cluster'] = str(clusterid)
-		k['title'] = str(tit)
+		k['title'] = str(id)
 		k['relatedness'] = "0.5"
 		k['sizes'] = str(size)
 		k['type'] = "node"
