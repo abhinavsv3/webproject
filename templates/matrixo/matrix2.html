@@ -16,6 +16,14 @@ div {
   background: #eee;
   display: inline-block;
 }
+divs {
+  width: 40px;
+  height: 20px;
+  margin: 1px 0 0 1px;
+  float: left;
+  background: #eee;
+  display: inline-block;
+}
 
 </style>
 <body>
@@ -30,14 +38,9 @@ var whiteblue = d3.interpolateRgb("#eee", "steelblue"),
     orangewhite = d3.interpolateRgb("orange", "#eee"),white = d3.interpolateRgb("blue", "grey");
 
 d3.select("body").selectAll("div")
-    .data(d3.range(500))
-  .enter().append("div")
-  .transition()
-    .delay(function(d, i) { return i + Math.random() * n / 10; })
-    .ease(d3.easeLinear)
-    .on("start", function repeat() {
-        d3.active(this)
-            .styleTween("background-color", function() { return white; })
-      });
-
+    .data(d3.range(1))
+  .enter().append("div");
+d3.select("body").selectAll("div")
+    .data(d3.range(1))
+  .enter().append("divs");
 </script>

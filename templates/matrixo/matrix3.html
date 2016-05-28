@@ -23,10 +23,17 @@ divs {
   height: 20px;
   margin: 1px 0 0 1px;
   float: right;
-  background: #000;
+  background: #e00;
   display: inline-block;
 }
-
+divse {
+  width: 20px;
+  height: 20px;
+  margin: 3px 0 0 4px;
+  float: right;
+  background: #00e;
+  display: inline-block;
+}
 </style>
 <body>
 <script src="http://d3js.org/d3.v4.0.0-alpha.24.min.js"></script>
@@ -34,13 +41,41 @@ divs {
 <script>
 
 var n = 4002;
+var data = [{"user":"jim","scores":[40,20,30,24,18,40]},
+            {"user":"ray","scores":[24,20,30,41,12,34]}];
 
+
+var chart = d3.select("div#charts").append("svg")                                   
+              .data(data)
+              .attr("class","chart")
+              .attr("width",800)
+              .attr("height",350);
+
+
+chart.selectAll("rect")    
+    .data(function(d){return d3.values(d.scores);})    
+    .enter().append("rect")
+    .attr("y", function(d,i){return i * 20;})
+    .attr("width",function(d){return d;})
+    .attr("height", 20);
+ /*
 var whiteblue = d3.interpolateRgb("#eee", "steelblue"),
     blueorange = d3.interpolateRgb("steelblue", "orange"),
     orangewhite = d3.interpolateRgb("orange", "#eee"),white = d3.interpolateRgb("blue", "grey");
-
+var a = [0,3,5,7,9]
+var x = d3.range(500)
 d3.select("body").selectAll("div")
-    .data(d3.range(1))
-  .enter().append("div");
+    .data(x)
+  .enter().append("divs");
+var y = d3.range(2)
+d3.select("body").selectAll("div")
+    .data(y)
+  .enter().append("divse");
 
+  var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom")
+
+    .tickValues(['hi','b','c','d','e']);
+*/
 </script>
