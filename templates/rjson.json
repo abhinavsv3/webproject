@@ -4,13 +4,13 @@
             "title": "0", 
             "type": "root", 
             "id": "0", 
-            "sizes": "140"
+            "sizes": "100"
         }, 
         {
             "title": "1", 
             "type": "root", 
             "id": "1", 
-            "sizes": "100"
+            "sizes": "140"
         }
     ], 
     "edges": [
@@ -18,7 +18,7 @@
             "source": "0", 
             "type": "edge", 
             "target": "0", 
-            "relatedness": "2"
+            "relatedness": "1"
         }, 
         {
             "source": "0", 
@@ -30,7 +30,7 @@
             "source": "1", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "1"
+            "relatedness": "2"
         }
     ]
 }

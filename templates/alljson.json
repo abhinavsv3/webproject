@@ -1,14 +1,6 @@
 {
     "nodes": [
         {
-            "title": "Abhinav S V", 
-            "sizes": "20", 
-            "relatedness": "0.5", 
-            "cluster": "0", 
-            "type": "node", 
-            "id": "0"
-        }, 
-        {
             "title": "Ricard Gavalda", 
             "sizes": "20", 
             "relatedness": "0.5", 
@@ -23,6 +15,14 @@
             "cluster": "0", 
             "type": "node", 
             "id": "3"
+        }, 
+        {
+            "title": "Abhinav S V", 
+            "sizes": "20", 
+            "relatedness": "0.5", 
+            "cluster": "1", 
+            "type": "node", 
+            "id": "0"
         }, 
         {
             "title": "Marta Arias", 
@@ -46,31 +46,31 @@
             "source": "0", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "1"
+            "relatedness": "5"
         }, 
         {
             "source": "0", 
             "type": "edge", 
             "target": "2", 
-            "relatedness": "1"
+            "relatedness": "6"
         }, 
         {
             "source": "1", 
             "type": "edge", 
             "target": "2", 
-            "relatedness": "1"
+            "relatedness": "7"
         }, 
         {
             "source": "1", 
             "type": "edge", 
             "target": "3", 
-            "relatedness": "1"
+            "relatedness": "8"
         }, 
         {
             "source": "2", 
             "type": "edge", 
             "target": "4", 
-            "relatedness": "1"
+            "relatedness": "9"
         }
     ]
 }
