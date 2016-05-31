@@ -11,11 +11,29 @@ urls = (
   '/userdisplay','userdisplay',
   '/rscreen','rscreen',
   '/root','rootsonscreen',
+  '/anode','anodes',
+  '/matrx','nodematrix',
   '/node','nodesonscreen' # Error class not yet here
   )
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
+
+class nodematrix:
+    def GET(self):
+        print "Displaying roots"
+        url = "./templates/themat.html"
+        new=2
+        webbrowser.open(url,new=new)
+        return render.rscreen()
+
+class anodes:
+    def GET(self):
+        print "Displaying roots"
+        url = "./templates/fullgraph.html"
+        new=2
+        webbrowser.open(url,new=new)
+        return render.rscreen()
 
 class rootsonscreen:
     def GET(self):

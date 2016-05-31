@@ -18,6 +18,9 @@
   h2 {
       font-size: 24px;
       text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      text-shadow: 2px 2px #eeeeef;
+      text-align: center;
       color: #303030;
       font-weight: 600;
       margin-bottom: 30px;
@@ -213,7 +216,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">graphApp</a>
+      <a class="navbar-brand" href="#myPage">graphApp - Dash Board</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -227,9 +230,8 @@
 
 <div class="container-fluid bg-blue">
 <br>
-  <h3>The program has used louvain Algorithm to split the graph into various communities</h3>
-  <h4>Click on the respective Buttons to have the view of the app</h4> 
-  <p>Works Really Cool</p>
+<h2>Dash Board</h2>
+  <h4>Click on the respecive buttons to view the respective graphs. <br>The Dash Board provides the required amount of user interface necessary for the program to be run without any hassel</h4> 
   <hr>
   <!--- <button class="btn btn-default btn-lg">Get in Touch</button> -->
 </div>
@@ -249,26 +251,76 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-2">
-      <span class="glyphicon glyphicon-fire logo"></span>
+      <span class="glyphicon glyphicon-eye-open logo"></span>
     </div>
     <div class="col-sm-4">
-      <h3>Roots</h3>
+      <h3>Community Graph</h3>
       <form class = "form-inline" action="/root" method = "get" enctype="multipart/form-data">
         <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
 
       </form>
-      <h4><strong>Roots:</strong> Displays the Upper most layer of the graph</h4> 
+      <h4><strong>Community Graph:</strong> Displays the Upper most layer of the graph. Each node is a community and the edges are the links between the two communities. </h4> 
       <p><strong>VISION:</strong> Highest level to see the graphs and thier interlinks</p>
     </div>
     <div class="col-sm-6">
-      <h3>All nodes</h3>
+      <h3>All nodes seperated as communities</h3>
       <form class = "form-inline" action="/node" method = "get" enctype="multipart/form-data">
         <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
 
       </form>
-      <h4><strong>Roots:</strong> Displays the Upper most layer of the graph</h4> 
-      <p><strong>VISION:</strong> Highest level to see the graphs and thier interlinks</p>
+      <h4><strong>Desc:</strong> All nodes are displayed in the graph seperated by communities.</h4> 
+      <p><strong>VISION:</strong> To View the lowermost layer demonstrated by the algorithm</p>
     </div>
+    <!--
+   <div class="col-sm-8">
+      <span class="glyphicon glyphicon-fire logo"></span>
+    </div>
+	 <div class="col-sm-8">
+      <h3>All nodes</h3>
+      <form class = "form-inline" action="/anode" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Desc:</strong> All nodes are displayed in the graph seperated by communities.</h4> 
+      <p><strong>VISION:</strong> To View the lowermost layer demonstrated by the algorithm</p> -->
+    </div> 
+    <hr>
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2">
+      <span class="glyphicon glyphicon-fire logo"></span>
+    </div>
+    <div class="col-sm-4">
+      <h3>Original Graph</h3>
+      <form class = "form-inline" action="/anode" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Original Graph:</strong> Displays the Entire graph without any internal processing.</h4> 
+      <p><strong>VISION:</strong> Viewing the graph of it's own helps us to visuvalize the graph in it's entirity</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Matrix Representation</h3>
+      <form class = "form-inline" action="/matrx" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Desc:</strong> All nodes are displayed in the graph seperated by communities.</h4> 
+      <p><strong>VISION:</strong> To View the lowermost layer demonstrated by the algorithm</p>
+    </div>
+    <!--
+   <div class="col-sm-8">
+      <span class="glyphicon glyphicon-fire logo"></span>
+    </div>
+	 <div class="col-sm-8">
+      <h3>All nodes</h3>
+      <form class = "form-inline" action="/anode" method = "get" enctype="multipart/form-data">
+        <input class="btn btn-default btn-lg" type = "submit" class = "form-control" value="Click here">
+
+      </form>
+      <h4><strong>Desc:</strong> All nodes are displayed in the graph seperated by communities.</h4> 
+      <p><strong>VISION:</strong> To View the lowermost layer demonstrated by the algorithm</p> -->
+    </div> 
 <!--
     <div class="col-sm-6">
       <h2>Our Values</h2>
