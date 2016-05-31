@@ -24,8 +24,9 @@ class nodematrix:
         print "Displaying roots"
         url = "./templates/themat.html"
         new=2
-        webbrowser.open(url,new=new)
-        return render.rscreen()
+        a=[[12,13,14],[16,17,18],[160,170,180]]
+        b= 3
+        return render.themat(a,b)
 
 class anodes:
     def GET(self):

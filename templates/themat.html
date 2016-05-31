@@ -1,3 +1,4 @@
+$def with (g,num)
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>Transform Transitions</title>
@@ -14,14 +15,16 @@ rect {
 
 </style>
 <body>
+print $num
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var w = 1000,
+var w = 1200,
     h = 500,
     z = 20,
     x = w / z,
     y = h / z;
+
 var c = d3.rgb("green"); 
 var aa = [1,2,0,3]
 
@@ -30,12 +33,13 @@ var svg = d3.select("body").append("svg")
     .attr("height", h);
 
 
-svg.selectAll("rect")
-    .data(d3.range(500))
-  .enter().append("rect")
+svg.selectAll("circle")
+    .data(d3.range(100))
+  .enter().append("circle")
     .attr("transform", translate)
-    .attr("width", z)
-    .attr("height", z)
+    .attr("cx", 0)
+    .attr("cy", 0)
+    .attr("r",2)
     .style("fill", a)
     .on("mouseover", mouseover)
     .on("mouseout", mouseout);
@@ -49,6 +53,9 @@ function ab(d,i){ var c = Math.floor(i/x); if(c%2){return i%2 ? d3.rgb("#000") :
 
 function translate(d) {
   return "translate(" + (((d % x) * z)+200)+ "," +( (Math.floor(d / x) * z)+100) + ")";
+}
+function trans(d) {
+  return "translate(" + 100+ "," +100 + ")";
 }
 
 function mouseover(d) {
