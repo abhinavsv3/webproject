@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Sorting Test</title>
+    <script type="text/javascript" src="http://abhinavsv3.github.io/javascriptsal/protovis/protovis.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript+protovis">
+
+
+var miserables = {
+  nodes:[
+    {nodeName:"Patient1(P1)", group:1},
+    {nodeName:"P2", group:2},
+    {nodeName:"P3", group:3},
+    {nodeName:"P. I have a Big NamePatient", group:4},
+    {nodeName:"SmallName", group:5},
+    {nodeName:"Spaces", group:1}
+    ],
+    links:[
+    {source:1, target:0, value:0},
+    {source:2, target:0, value:100},
+    {source:3, target:0, value:10},
+    {source:3, target:2, value:6},
+    {source:4, target:0, value:1},
+    {source:5, target:0, value:1}
+    ]} ;
+
+var vis = new pv.Panel()
+    .width(700)
+    .height(700)
+    .top(120)
+    .left(130);
+
+var layout = vis.add(pv.Layout.Matrix)
+    .nodes(miserables.nodes)
+    .links(miserables.links)
+   
+
+layout.link.add(pv.Bar);
+layout.label.add(pv.Label);
+
+vis.render();
+
+function resort(){
+  document.write("_")
+  var vis = new pv.Panel()
+    .width(700)
+    .height(700)
+    .top(90)
+    .left(90);
+
+var layout = vis.add(pv.Layout.Matrix)
+    .nodes(miserables.nodes)
+    .links(miserables.links)
+    .sort(function(a, b) b.linkDegree - a.linkDegree);
+
+layout.link.add(pv.Bar);
+layout.label.add(pv.Label);
+
+vis.render();
+}
+    </script>
+
+     <button onclick="resort()">Click me</button> 
+
+  </body>
+
+</html>

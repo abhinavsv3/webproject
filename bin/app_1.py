@@ -16,8 +16,6 @@ urls = (
   '/node','nodesonscreen' # Error class not yet here
   )
 
-db = web.database(dbn='mysql', user='username', pw='password', db='dbname')
-
 app = web.application(urls, globals())
 render = web.template.render('templates/')
 
