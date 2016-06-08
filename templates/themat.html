@@ -1,80 +1,69 @@
-$def with (g,num)
-<!DOCTYPE html>
-<meta charset="utf-8">
-<title>Transform Transitions</title>
-<style>
+$def with (g)
+<html>
+  <head>
+    <title>Sorting Test</title>
+    <script type="text/javascript" src="http://abhinavsv3.github.io/javascriptsal/protovis/protovis.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript+protovis">
 
-body {
-  margin: 0;
+
+var miserables = {
+  nodes:[
+    {nodeName:"Patient1(P1)", group:1},
+    {nodeName:"P2", group:2},
+    {nodeName:"P3", group:3},
+    {nodeName:"P. I have a Big NamePatient", group:4},
+    {nodeName:"SmallName", group:5},
+    {nodeName:"Spaces", group:1}
+    ],
+    links:[
+    {source:1, target:0, value:0},
+    {source:2, target:0, value:100},
+    {source:3, target:0, value:10},
+    {source:3, target:2, value:6},
+    {source:4, target:0, value:1},
+    {source:5, target:0, value:1}
+    ]} ;
+
+var vis = new pv.Panel()
+    .width(700)
+    .height(700)
+    .top(120)
+    .left(130);
+
+var layout = vis.add(pv.Layout.Matrix)
+    .nodes(miserables.nodes)
+    .links(miserables.links)
+   
+
+layout.link.add(pv.Bar);
+layout.label.add(pv.Label);
+
+vis.render();
+
+function resort(){
+  document.write("_")
+  var vis = new pv.Panel()
+    .width(700)
+    .height(700)
+    .top(90)
+    .left(90);
+
+var layout = vis.add(pv.Layout.Matrix)
+    .nodes(miserables.nodes)
+    .links(miserables.links)
+    .sort(function(a, b) b.linkDegree - a.linkDegree);
+
+layout.link.add(pv.Bar);
+layout.label.add(pv.Label);
+
+vis.render();
 }
+    </script>
 
-rect {
-  stroke: #fff;
-  stroke-width: .1px;
-}
+     <button onclick="resort()">Click me</button> 
 
-</style>
-<body>
-print $num
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
+  </body>
 
-var w = 1200,
-    h = 500,
-    z = 20,
-    x = w / z,
-    y = h / z;
-
-var c = d3.rgb("green"); 
-var aa = [1,2,0,3]
-
-var svg = d3.select("body").append("svg")
-    .attr("width", w)
-    .attr("height", h);
-
-
-svg.selectAll("circle")
-    .data(d3.range(100))
-  .enter().append("circle")
-    .attr("transform", translate)
-    .attr("cx", 0)
-    .attr("cy", 0)
-    .attr("r",2)
-    .style("fill", a)
-    .on("mouseover", mouseover)
-    .on("mouseout", mouseout);
-
-
-
-
-function a(d,i){var ar=["red","green","blue","grey"] ; return c;} 
-
-function ab(d,i){ var c = Math.floor(i/x); if(c%2){return i%2 ? d3.rgb("#000") : d3.rgb("#eee") ;} else {return i%2 == 0 ? d3.rgb("#e00") : d3.rgb("#00e") ;} }
-
-function translate(d) {
-  return "translate(" + (((d % x) * z)+200)+ "," +( (Math.floor(d / x) * z)+100) + ")";
-}
-function trans(d) {
-  return "translate(" + 100+ "," +100 + ")";
-}
-
-function mouseover(d) {
-  this.parentNode.appendChild(this);
-  
-  d3.select(this)
-    .transition()
-      .style("fill", function (d){return d3.hsl("blue")})
-      .attr("width",z+20)
-      .attr("height",z+20);
-}
-
-function mouseout(d) {
-  this.parentNode.appendChild(this);
-  
-  d3.select(this)
-    .transition()
-      .style("fill", function (d){return d3.rgb("green")})
-      .attr("width",z)
-      .attr("height",z);
-}
-</script>
+</html>

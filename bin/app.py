@@ -16,19 +16,23 @@ urls = (
   '/node','nodesonscreen' # Error class not yet here
   )
 
-db = web.database(dbn='mysql', user='username', pw='password', db='dbname')
+#  db = web.database(dbn='mysql', user='username', pw='password', db='dbname')
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
+
+drelabel = {}
 
 class nodematrix:
     def GET(self):
         print "Displaying roots"
         url = "./templates/themat.html"
         new=2
-        a=[[12,13,14],[16,17,18],[160,170,180]]
+        a={"nodes":[{"nodename":"ABC","group":2},{"nodename":"AB","group":0},{"nodename":"ABCD","group":1},{"nodename":"A","group":3}],
+            "links":[{"source":1, "target":0, "value":10},{"source":1, "target":2, "value":5},{"source":1, "target":3, "value":0},{"source":0, "target":4, "value":6}]}
         b= 3
-        return render.themat(a,b)
+        print "drelabel",drelabel
+        return render.themat(a)
 
 class anodes:
     def GET(self):
@@ -117,7 +121,17 @@ class userdisplay:
                 g.sCreateGraph(x['myfile'].value)   
 
             partition, q= g.louvain()
-            print partition,q   
+            print partition,q
+
+            d = {}
+            y=0
+
+            for i in partition:
+                for j in i:
+                    d[j] = y
+                y=y+1
+
+            print "d is here", d
 
             if fila == 1:
                 v = [rbl[g.relabel[i]] for i in g.relabel]
@@ -125,6 +139,16 @@ class userdisplay:
 
 
             #roots  
+
+            print d
+            vara =  d.values()
+            varb = g.relabel.values()
+
+            varc = zip(varb,vara)
+            vard = dict(varc)
+            global drelabel
+            drelabel= vard
+            print drelabel
 
             r,nn = spl.splitroot(g,partition)
             r.jsonDump("rjson.json")
