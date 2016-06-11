@@ -74,7 +74,7 @@ class index:
             else:
                 raise
         except:
-            return render.error("Login error")
+            return render.error("Login error. Hey, Could you see if your Password or username is correct?")
 
 class userdisplay:
     def GET(self):
@@ -169,7 +169,7 @@ class userdisplay:
             return render.rscreen()
         except:
             print("Unexpected error:", sys.exc_info()[0])
-            return render.error("Error In userdisplay")
+            return render.error("Error In userdisplay: Hey, Please see if the format of data is coreect, like spaces. If you have any headers before your input remove it. I cannot process unwanted information for now. Sorry about that. :) ")
 
 
 class rscreen:
