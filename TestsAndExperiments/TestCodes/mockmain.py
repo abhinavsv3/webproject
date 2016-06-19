@@ -9,13 +9,13 @@
 import networkx as nx
 #importing modular graph generator by Sah2014
 import random_modular_generator_variable_modules as rmg
-#importing sequence generator by Sah2014
+#importing1seence generator by Sah2014
 import sequence_generator as sg
-
+from random import randint as ran
 ################################################################################################
 
 # Enter the network size(N), average network degree (d), total modules in the network (m), and modularity (Q)
-N=20000
+N=100
 d=10
 m=10
 Q= 0.4
@@ -33,8 +33,8 @@ modfunction = sg.regular_sequence
 print "Generating a simple poisson random modular graph with modularity(Q)= " + str(Q)
 print "Graph has " + str(N) + " nodes, " +str(m)+ " modules, and a network mean degree of " + str(d)
 print "Generating graph....." 
-for i in range(2000,N):
-	G = rmg.generate_modular_networks(i, sfunction, modfunction, Q, m, d)
+for i in range(1,N):
+	G = rmg.generate_modular_networks(i*1000+ran(1,999), sfunction, modfunction, Q, m, d)
 	print i," is being loaded"
 	k =  G.edges()
 	f = open(str(i)+".txt","w")

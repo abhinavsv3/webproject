@@ -15,8 +15,9 @@ import louvaininpy as lv
 ################################################################################################
 import time as tm
 import matplotlib.pyplot as plt
+import gc
 # generate the graph! 
-N = 500
+N = 2000
 l = []
 for i in range(150,N):
 	s = str(i)+".txt"
@@ -25,17 +26,22 @@ for i in range(150,N):
 	g.createGraph(s)
 	b = tm.time()
 	l.append(b-a)
+	gc.collect()
+
 
 print len(l)
+
+"""
+
 f = plt.figure()
 
 ax = f.add_subplot(111)
 
 for i in range(150,N):
 	 ax.annotate('(%s)' % i,xy=(i,l[i-150]),textcoords='data')
-
-plt.plot(range(150,N),l,"b-o",label = "Graph")
-plt.legend( loc='upper left', numpoints = 1 )
+"""
+plt.plot(range(150,N),l,"ro")
+#plt.legend( loc='upper left', numpoints = 1 )
 plt.ylabel("Time")
 plt.xlabel("N")
 plt.show()

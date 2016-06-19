@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # generate the graph! 
 N = 2000
 l = []
-for i in range(150,N):
+for i in range(1,12):
 	s = str(i)+".txt"
 	a = tm.time()
 	g = lv.louvaininpy()
@@ -27,7 +27,7 @@ for i in range(150,N):
 	l.append(b-a)
 
 print len(l)
-plt.plot(range(150,N),l)
+plt.plot(range(1,12),l,"ro")
 plt.ylabel("Time")
 plt.xlabel("N")
 plt.show()
