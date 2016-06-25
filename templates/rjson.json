@@ -4,19 +4,25 @@
             "title": "0", 
             "type": "root", 
             "id": "0", 
-            "sizes": "86"
+            "sizes": "61"
         }, 
         {
             "title": "1", 
             "type": "root", 
             "id": "1", 
-            "sizes": "86"
+            "sizes": "78"
         }, 
         {
             "title": "2", 
             "type": "root", 
             "id": "2", 
-            "sizes": "86"
+            "sizes": "43"
+        }, 
+        {
+            "title": "3", 
+            "type": "root", 
+            "id": "3", 
+            "sizes": "96"
         }
     ], 
     "edges": [
@@ -24,37 +30,55 @@
             "source": "0", 
             "type": "edge", 
             "target": "0", 
-            "relatedness": "3"
+            "relatedness": "11"
         }, 
         {
             "source": "0", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "4"
+            "relatedness": "9"
         }, 
         {
             "source": "0", 
             "type": "edge", 
             "target": "2", 
-            "relatedness": "4"
+            "relatedness": "1"
+        }, 
+        {
+            "source": "0", 
+            "type": "edge", 
+            "target": "3", 
+            "relatedness": "6"
         }, 
         {
             "source": "1", 
             "type": "edge", 
             "target": "1", 
-            "relatedness": "3"
+            "relatedness": "14"
         }, 
         {
             "source": "1", 
             "type": "edge", 
-            "target": "2", 
-            "relatedness": "5"
+            "target": "3", 
+            "relatedness": "3"
         }, 
         {
             "source": "2", 
             "type": "edge", 
             "target": "2", 
             "relatedness": "3"
+        }, 
+        {
+            "source": "2", 
+            "type": "edge", 
+            "target": "3", 
+            "relatedness": "8"
+        }, 
+        {
+            "source": "3", 
+            "type": "edge", 
+            "target": "3", 
+            "relatedness": "23"
         }
     ]
 }
