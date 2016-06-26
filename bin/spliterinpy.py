@@ -11,9 +11,9 @@ def splitroot(g,partition):
 		for j in i:
 			d[j] = y
 		y = y + 1
-	print d	
+	#print  d	
 
-	print roots[0][0]	
+	#print  roots[0][0]	
 
 	#Create the root json
 	newj = jj.jsoninpy()
@@ -29,9 +29,9 @@ def splitroot(g,partition):
 		l = l+1	
 	lst = {}
 	matrixa = [[0 for i in range(len(partition))] for j in range(len(partition))]
-	print matrixa
+	#print  matrixa
 	for i in range(0,g.length):
-		print "Creating Edge :", g.start[i], "--",g.wgt[i], "-->", g.dest[i]
+		#print  "Creating Edge :", g.start[i], "--",g.wgt[i], "-->", g.dest[i]
 		newnode.jsonEdge(g.start[i],g.dest[i],g.wgt[i])
 		if d[g.dest[i]] == d[g.start[i]]:
 			matrixa[d[g.start[i]]][d[g.dest[i]]] += 1
@@ -40,7 +40,7 @@ def splitroot(g,partition):
 			matrixa[d[g.dest[i]]][d[g.start[i]]] += 1	
 
 
-	print matrixa	
+	#print  matrixa	
 
 	for i in range(0,lenp):
 		for j in range(i,lenp):
